@@ -286,7 +286,7 @@ void Tish::help(string command){
 	// Printing something to the screen even if none of the inputted strings equal commandLine, the user likely mistyped a command or is unsure if it exists on the machine 
 
 	if(helpExists == false){
-		cout << "No help topics match " << commandLine << endl; 
+		cout << "No help topics match " << command << endl; 
 	}
 
 }
