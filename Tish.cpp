@@ -210,7 +210,7 @@ void Tish::ExecCommand(string command){
 void Tish::help(string command){
 
 	bool helpExists = false; 
-	if(commandLine == "help"){
+	if(command == "help"){
 		cout << endl << "The help command prints out information about every command and how to execute them." << endl 
 		<< "The format for a help command is" << endl << ">:help <commandName>" << endl;
 		return;
@@ -220,64 +220,64 @@ void Tish::help(string command){
 	// At this point there must be something inputted after "help," therefore the help and white space
 	// is removed from commandLine and commandLine is now equal to the command inputted after help 
 
-	commandLine = commandLine.substr(5);
+	command = command.substr(5);
 
-	if (commandLine == "exit"){
+	if (command == "exit"){
 		cout << "The exit command exits the Shell" << endl 
 		<< "The format for the exit command is" << endl << ">:exit" << endl;
 		helpExists = true;
 	}
 
-	if (commandLine == "tishtime"){
+	if (command == "tishtime"){
 		cout << "The tishtime command prints out how long the shell has been running in seconds and minutes if applicable" << endl 
 		<< "The format for the tishtime command is" << endl << ">:tishtime" << endl;
 		helpExists = true;
 	}
 
-	if (commandLine == "lines"){
+	if (command == "lines"){
 		cout << "The lines command shows how many lines have been inputted by the user.";
 		cout << "A line is determined by every press of the enter/return key. Therefore using the lines command also counts as a line" << endl; 
 		cout << "The format for the lines command is" << endl << ">:lines" << endl;
 		helpExists = true;
 	}
 
-	if(commandLine == "lastcom"){
+	if(command == "lastcom"){
 		cout << "The lastcom command executes the last command again. It can be used multiple times to repeat the last commmand." << endl 
 		<< "The format for the lastcom command is" << endl << ">:lastcom" << endl;
 		helpExists = true;
 	}
 
-	if(commandLine == "maxprocesses"){
+	if(command == "maxprocesses"){
 		cout << "The maxprocesses command prints out the maximum number of child processes per user id using the sysconf commands" << endl 
 		<< "The format for the maxprocesses command is" << endl<< ">:maxprocesses" << endl;
 		helpExists = true;
 	}
 
-	if(commandLine == "pagesize"){
+	if(command == "pagesize"){
 		cout << "The pagesize command prints out the system page size in bytes using the sysconf commands" << endl 
 		<< "The format for the pagesize command is" << endl<< ">:pagesize" << endl;
 		helpExists = true;
 	}
 
-	if(commandLine == "cwd"){
+	if(command == "cwd"){
 		cout << "The cwd command prints out the current working directory of the indicated process. This command is dependent on the proc file system to return without error." << endl 
 		<< "The format for the cwd command is" << endl<< ">:cwd pid" << endl;
 		helpExists = true;
 		}
 
-	if(commandLine == "size"){
+	if(command == "size"){
 		cout << "The size command prints out the size of the process in pages, and there are two kilobytes per page. This command is dependent on the proc file system to return without error." << endl 
 		<< "The format for the size command is" << endl<< ">:size pid" << endl;
 		helpExists = true;
 		}
 
-	if(commandLine == "pstate"){
+	if(command == "pstate"){
 		cout << "The pstate command prints out the current state of the process. This command is dependent on the proc file system to return without error." << endl 
 		<< "The format for the pstate pid command is" << endl<< ">:pstate pid" << endl;
 		helpExists = true;
 		}
 
-	if(commandLine == "parent"){
+	if(command == "parent"){
 		cout << "The parent command prints out the parent pid of the process. This command is dependent on the proc file system to return without error." << endl 
 		<< "The format for the parent command is" << endl<< ">:parent pid" << endl;
 		helpExists = true;
