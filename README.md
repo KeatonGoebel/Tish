@@ -4,11 +4,11 @@ Tish is a C++ implementation of a command-line interface program. It was written
 
 * help: The help command prints out information about every command and how to execute them.
 
-* exit: The exit command exits the Shell
+* exit: The exit command exits the program
 
 * tishtime: The tishtime command prints out how long the shell has been running in seconds and minutes if applicable
 
-* lines: The lines command shows how many lines have been inputted by the user.A line is determined by every press of the enter/return key. Therefore using the lines command also counts as a line
+* lines: The lines command shows how many lines have been inputted by the user. A line is determined by every press of the enter/return key. Therefore using the lines command also counts as a line
 
 * lastcom: The lastcom command executes the last command again. It can be used multiple times to repeat the last commmand.
 
