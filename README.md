@@ -10,7 +10,7 @@ Tish is a C++ implementation of a command-line interface program. It was written
 
 * lines: The lines command shows how many lines have been inputted by the user. A line is determined by every press of the enter/return key. Therefore using the lines command also counts as a line
 
-* lastcom: The lastcom command executes the last command again. It can be used multiple times to repeat the last commmand.
+* lastcom: The lastcom command executes the last command again. It can be used multiple times to repeat the last commmand
 
 * maxprocesses: The maxprocesses command prints out the maximum number of child processes per user id using the sysconf commands
 
